@@ -62,7 +62,7 @@ THE SOFTWARE.
 // You can use letters A to Z, numbers 0 to 9 and some special characters like # / \ - _ etc.
 // Please use only caps lock letters because name is not case sensitive. Avoid using blanks in name!
 
-#define MY_QUAD_NAME "LIKE A BOSS"
+#define MY_QUAD_NAME "E011 716 BOSS"
 
 // MY_QUAD_ID defines unique ID for MAC address. Leave 127 or replace it with any other value between 0 and 255.
 // Use ONLY values between 0 and 255!
