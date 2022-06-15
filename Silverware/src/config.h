@@ -11,10 +11,10 @@
 // *************uncomment E011 define for E011 flight Controller
 // *************uncomment H8mini_blue_board for the H8 mini flight controller with blue circuit board
 //#define BWHOOP
-//#define E011
+#define E011
 //#define H8mini_blue_board
 //#define Silverlite_Brushless
-#define Alienwhoop_ZERO  
+//#define Alienwhoop_ZERO  
 
 
 
@@ -58,7 +58,7 @@
 
 
 // *************max angle for level mode
-#define LEVEL_MAX_ANGLE 65.0f
+#define LEVEL_MAX_ANGLE 75.0f
 
 // ************* low rates multiplier if rates are assigned to a channel
 #define LOW_RATES_MULTI 0.5f
@@ -75,19 +75,19 @@
 
 // *************Radio protocol selection
 // *************select only one
-#define RX_SBUS
+//#define RX_SBUS
 //#define RX_CRSF                                           //Requires tbs firmware v2.88 or newer for failsafe to operate properly
 //#define RX_DSMX_2048
 //#define RX_DSM2_1024
 //#define RX_IBUS
 //#define RX_NRF24_BAYANG_TELEMETRY
-//#define RX_BAYANG_BLE_APP
+#define RX_BAYANG_BLE_APP
 //#define RX_BAYANG_PROTOCOL_TELEMETRY_AUTOBIND
 
 // *************Transmitter Type Selection
-//#define USE_STOCK_TX
+#define USE_STOCK_TX
 //#define USE_DEVO
-#define USE_MULTI
+//#define USE_MULTI
 
 // *******************************SWITCH SELECTION*****************************
 // *************CHAN_ON - on always ( all protocols)
@@ -106,8 +106,8 @@
 #define ARMING CHAN_5
 #define IDLE_UP CHAN_5
 #define LEVELMODE CHAN_6
-#define RACEMODE  CHAN_7
-#define HORIZON   CHAN_8
+#define RACEMODE  CHAN_OFF
+#define HORIZON   CHAN_OFF
 #define PIDPROFILE CHAN_9                //For switching stickAccelerator & stickTransition profiles on pid.c page
 #define RATES CHAN_ON
 #define LEDS_ON CHAN_10
@@ -146,7 +146,7 @@
 // *************Led light will blink once when LVC forced landing is turned on, blink twice when turned off, and will blink multiple times upon save command
 // *************Enter values in volts per cell
 #define LVC_LOWER_THROTTLE
-#define LVC_LOWER_THROTTLE_VOLTAGE 3.30
+#define LVC_LOWER_THROTTLE_VOLTAGE 3.20
 #define LVC_LOWER_THROTTLE_VOLTAGE_RAW 2.70
 #define LVC_LOWER_THROTTLE_KP 3.0
 
