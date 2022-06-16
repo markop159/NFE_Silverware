@@ -203,10 +203,10 @@
 
 
 //#define WEAK_FILTERING
-#define STRONG_FILTERING
+//#define STRONG_FILTERING
 //#define VERY_STRONG_FILTERING
 //#define ALIENWHOOP_ZERO_FILTERING
-//#define BETA_FILTERING
+#define BETA_FILTERING
 
 #ifdef BETA_FILTERING  //*** ABOVE 100 ADJUST IN INCRIMENTS OF 20, BELOW 100 ADJUST IN INCRIMENTS OF 10, nothing coded beyond 500hz
 
@@ -215,11 +215,11 @@
 //#define PT1_GYRO
 
 //Select Gyro Filter Cut Frequency
-#define GYRO_FILTER_PASS1 HZ_90
-#define GYRO_FILTER_PASS2 HZ_90
+#define GYRO_FILTER_PASS1 HZ_70
+#define GYRO_FILTER_PASS2 HZ_70
 
 //Select D Term Filter Cut Frequency *** Select Only one
-#define  DTERM_LPF_2ND_HZ 100
+#define  DTERM_LPF_2ND_HZ 120
 //#define DTERM_LPF_1ST_HZ 70
 
 //Select Motor Filter Type  (I am no longer using this)
@@ -252,11 +252,11 @@
 // *************is very noise sensative so D term specifically has to be lowered and gyro/d filtering may need to be increased.
 // *************reccomendation right now is to leave boost at or below 2, drop your p gains a few points, then cut your D in half and 
 // *************retune it back up to where it feels good.  I'm finding about 60 to 65% of my previous D value seems to work.
-//#define TORQUE_BOOST 1.0
+#define TORQUE_BOOST 1.0
 
 // *************makes throttle feel more poppy - can intensify small throttle imbalances visible in FPV if factor is set too high
-//#define THROTTLE_TRANSIENT_COMPENSATION 
-//#define THROTTLE_TRANSIENT_COMPENSATION_FACTOR 4.0 
+#define THROTTLE_TRANSIENT_COMPENSATION 
+#define THROTTLE_TRANSIENT_COMPENSATION_FACTOR 4.0 
  
 // *************throttle angle compensation in level mode
 //#define AUTO_THROTTLE
