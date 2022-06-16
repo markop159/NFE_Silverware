@@ -29,18 +29,18 @@
 #ifdef SILVERWARE_RATES
 // *************rate in deg/sec
 // *************for acro mode
-#define MAX_RATE 860.0          //Roll & Pitch axis
-#define MAX_RATEYAW 500.0       //Yaw axis (used in acro and leveling modes)
+#define MAX_RATE 460.0          //Roll & Pitch axis
+#define MAX_RATEYAW 360.0       //Yaw axis (used in acro and leveling modes)
 
 // *************EXPO from 0.00 to 1.00 , 0 = no exp
 // *************positive = less sensitive near center 
-#define ACRO_EXPO_ROLL 0.80
-#define ACRO_EXPO_PITCH 0.80
-#define ACRO_EXPO_YAW 0.60
+#define ACRO_EXPO_ROLL 0.0
+#define ACRO_EXPO_PITCH 0.0
+#define ACRO_EXPO_YAW 0.0
 
-#define ANGLE_EXPO_ROLL 0.55
+#define ANGLE_EXPO_ROLL 0.0
 #define ANGLE_EXPO_PITCH 0.0
-#define ANGLE_EXPO_YAW 0.55
+#define ANGLE_EXPO_YAW 0.0
 #endif
 
 #ifdef BETAFLIGHT_RATES
@@ -103,14 +103,14 @@
 //*************be active.  With LEVELMODE active - MCU will apply RACEMODE if racemode channel is on, HORIZON if horizon 
 //*************channel is on, or racemodeHORIZON if both channels are on - and will be standard LEVELMODE if neither 
 //*************racemode or horizon are switched on.
-#define ARMING CHAN_5
-#define IDLE_UP CHAN_5
+//#define ARMING CHAN_5
+//#define IDLE_UP CHAN_5
 #define LEVELMODE CHAN_6
 #define RACEMODE  CHAN_OFF
 #define HORIZON   CHAN_OFF
 #define PIDPROFILE CHAN_9                //For switching stickAccelerator & stickTransition profiles on pid.c page
 #define RATES CHAN_ON
-#define LEDS_ON CHAN_10
+#define LEDS_ON CHAN_ON
 
 // *************switch for fpv / other, requires fet
 // *************comment out to disable
@@ -135,7 +135,7 @@
 //***********************************************VOLTAGE SETTINGS*******************************************************
 
 // ************* Set your lipo cell count to override auto cell count detect logic
-//#define LIPO_CELL_COUNT 1
+#define LIPO_CELL_COUNT 1
 
 // ************* Raises pids automatically as battery voltage drops in flight.  Ensure voltage is calibrated before use ****CRITICAL****.
 #define PID_VOLTAGE_COMPENSATION
@@ -203,10 +203,10 @@
 
 
 //#define WEAK_FILTERING
-//#define STRONG_FILTERING
+#define STRONG_FILTERING
 //#define VERY_STRONG_FILTERING
 //#define ALIENWHOOP_ZERO_FILTERING
-#define BETA_FILTERING
+//#define BETA_FILTERING
 
 #ifdef BETA_FILTERING  //*** ABOVE 100 ADJUST IN INCRIMENTS OF 20, BELOW 100 ADJUST IN INCRIMENTS OF 10, nothing coded beyond 500hz
 
@@ -236,7 +236,7 @@
 #define MOTOR_MIN_COMMAND  5.0
 
 // *************invert yaw pid for "PROPS OUT" configuration - This feature is switchable to "PROPS IN" when active with stick gesture DOWN-UP-DOWN, Save selection with DOWN-DOWN-DOWN
-#define INVERT_YAW_PID
+//#define INVERT_YAW_PID
 
 // *************pwm frequency for motor control
 // *************a higher frequency makes the motors more linear
@@ -308,7 +308,7 @@
 // *************This define will allow you to check if your radio is reaching 100% throws entering <RIGHT-RIGHT-DOWN> gesture
 // ************* will disable throttle and will rapid blink the led when sticks are moved to 100% throws
 // *************entering <LEFT-LEFT-DOWN> will return the quad to normal operation.
-#define STICK_TRAVEL_CHECK
+//#define STICK_TRAVEL_CHECK
 
 // *************ANALOG AUX CHANNELS
 // *************For some protocols, use Tx channels as auxiliary analog values
